@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+:root {
+  --var-line--empty: rgb(223, 223, 223);
+  --var-line--fill: rgb(0, 207, 162);
+}
+
+#processText,
+#processNumber {
+  display: inline-block;
+}
+
+.container {
+  align-items: center;
+}
+.progress-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: center;
+  position: relative;
+}
+
+p {
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  align-content: center;
+}
+
+.circle {
+  background-color: transparent;
+  border-radius: 50%;
+  border: solid 2px rgb(184, 184, 184);
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+}
+.circle p {
+  position: absolute;
+  font-size: 16px;
+  top: -45%;
+  right: 35%;
+  color: grey;
+}
+
+.circle.active {
+  border: solid 2px var(--var-line--fill);
+  background-color: var(--var-line--fill);
+  color: white;
+  transition: color 0.4s ease;
+  background: 0.4s ease;
+}
+
+.circle.active p {
+  color: white;
+}
+
+.progresses {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 15%;
+  right: 3.6%;
+}
+
+.step {
+  transition: color 0.4s ease;
+}
+.step.active {
+  color: rgb(16, 119, 85);
+  font-weight: 600;
+}
+.progress {
+  background-color: var(--var-line--empty);
+  display: flex;
+  top: 14%;
+  right: 72.5%;
+  height: 2px;
+  border-radius: 0%;
+  width: 35px;
+  margin-right: 35px;
+  transition: background-color 0.5s;
+}
+
+.progress.active {
+  background-color: var(--var-line--fill);
+}
+
+/* .progress::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: -40%;
+  right: 20%;
+  height: 4px;
+} */
+
+button {
+  width: 70px;
+  height: 30px;
+  background-color: rgb(29, 99, 99);
+  margin-top: 20px;
+  margin-left: 40px;
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.08s ease-out;
+  color: aliceblue;
+  font-family: "montserrat";
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(94%);
+}
+button:focus {
+  outline: none;
+  user-select: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: rgb(170, 170, 170);
+}

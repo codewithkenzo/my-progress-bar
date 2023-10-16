@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress bar 2</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <p id="processText">Processing...&#160; <span id="processNumber">10%<span/></p>
+      <div class="progress-container">
+        <div class="content">
+          <div class="circle"><p class="check">1</p></div>
+          <p class="step">Step 1</p>
+        </div>
+
+        <div class="content">
+          <div class="circle"><p class="check">2</p></div>
+          <p class="step">Step 2</p>
+        </div>
+        <div class="content">
+          <div class="circle"><p class="check">3</p></div>
+          <p class="step">Step 3</p>
+        </div>
+        <div class="content">
+          <div class="circle"><p class="check">4</p></div>
+          <p class="step">Step 4</p>
+        </div>
+        <div class="progresses">
+          <div class="progress" id="progress"></div>
+          <div class="progress" id="progress"></div>
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+
+      <button id="prev" class="prev" disabled>Prev</button>
+      <button id="next" class="next">Next</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
